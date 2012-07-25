@@ -4,7 +4,7 @@
 //import junit.framework.TestSuite;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class AllTests
 //{
@@ -16,7 +16,7 @@
 //
 //	public static Test suite()
 //	{
-//		TestSuite suite = new TestSuite("Test for com.ldodds.musicbrainz");
+//		TestSuite suite = new TestSuite("Test for com.prasannaa.musicbrainz");
 //		//$JUnit-BEGIN$
 //		suite.addTest(new TestSuite(FindAlbumTest.class));
 //		suite.addTest(new TestSuite(FindArtistTest.class));

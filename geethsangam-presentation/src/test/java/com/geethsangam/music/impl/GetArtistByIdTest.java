@@ -6,7 +6,7 @@
 //import junit.framework.TestCase;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class GetArtistByIdTest extends TestCase
 //{

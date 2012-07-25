@@ -5,7 +5,7 @@
 //import junit.framework.TestCase;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class GetAlbumByIdTest extends TestCase
 //{

@@ -22,7 +22,7 @@ import com.hp.hpl.jena.vocabulary.*;
  * for which method is suitable for processing which query results.
  * </p>
  *  
- * @author ldodds
+ * @author prasannaa
  */
 public class BeanPopulator
 {

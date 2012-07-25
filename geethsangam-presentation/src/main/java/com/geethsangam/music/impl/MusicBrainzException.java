@@ -11,7 +11,7 @@ import com.hp.hpl.jena.rdf.model.Model;
  * with an mq:error property</li>
  * </ul>
  * 
- * @author ldodds
+ * @author prasannaa
  */
 public class MusicBrainzException extends RuntimeException
 {

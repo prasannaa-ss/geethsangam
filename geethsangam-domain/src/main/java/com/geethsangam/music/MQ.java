@@ -10,7 +10,7 @@ import com.hp.hpl.jena.rdf.model.*;
  * for a hand-crafted equivalent.
  * 
  * @see http://www.musicbrainz.org/MM#mq
- * @author ldodds
+ * @author prasannaa
  */
 public class MQ
 {

@@ -10,7 +10,7 @@ import com.geethsangam.music.impl.Templates;
 import com.hp.hpl.jena.rdf.model.*;
 
 /**
- * @author ldodds
+ * @author prasannaa
  */
 public class MusicBrainzImpl implements MusicBrainz {
 

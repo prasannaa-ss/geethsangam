@@ -13,7 +13,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
  * for a hand-crafted equivalent.
  *  
  * @see http://www.musicbrainz.org/MM#mm
- * @author ldodds
+ * @author prasannaa
  */
 public class MM
 {

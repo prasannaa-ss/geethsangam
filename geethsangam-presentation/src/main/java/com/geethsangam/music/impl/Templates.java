@@ -1,7 +1,7 @@
 package com.geethsangam.music.impl;
 
 /**
- * @author ldodds
+ * @author prasannaa
  */
 public final class Templates
 {

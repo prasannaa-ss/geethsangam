@@ -7,7 +7,7 @@
 //import com.hp.hpl.jena.rdf.model.*;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class BeanPopulatorTest extends TestCase
 //{

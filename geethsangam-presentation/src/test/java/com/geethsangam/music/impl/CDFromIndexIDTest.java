@@ -7,7 +7,7 @@
 //import java.util.*;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class CDFromIndexIDTest extends TestCase
 //{

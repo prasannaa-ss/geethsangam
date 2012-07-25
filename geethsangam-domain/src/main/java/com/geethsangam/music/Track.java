@@ -7,7 +7,7 @@ import java.util.*;
  * 
  * Note: this class has a natural ordering that is inconsistent with equals.
  * 
- * @author ldodds
+ * @author prasannaa
  */
 public class Track implements Comparable, Serializable
 {

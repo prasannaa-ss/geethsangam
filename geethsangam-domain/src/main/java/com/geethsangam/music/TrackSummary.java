@@ -11,7 +11,7 @@ import java.io.Serializable;
  * The constructor for this class is protected to limit it's construction to within the 
  * API. Where possible you should always prefer using Track rather than TrackSummary. 
  * 
- * @author ldodds
+ * @author prasannaa
  */
 public final class TrackSummary implements Serializable
 {

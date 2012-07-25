@@ -3,7 +3,7 @@
 //import junit.framework.TestCase;
 //
 ///**
-// * @author ldodds
+// * @author prasannaa
 // */
 //public class ArtistTest extends TestCase
 //{

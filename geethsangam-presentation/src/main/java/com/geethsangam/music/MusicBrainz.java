@@ -18,7 +18,7 @@ import com.hp.hpl.jena.rdf.model.*;
  * Doesn't support submission and authentication. i.e. read-only. Also doesn't
  * support FileInfoLookup yet. 
  *  
- * @author ldodds
+ * @author prasannaa
  */
 public interface MusicBrainz {
 
