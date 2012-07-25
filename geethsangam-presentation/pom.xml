@@ -27,6 +27,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+          <groupId>com.geethsangam.music</groupId>
+  <artifactId>geethsangam-domain</artifactId>
+  <version>0.1</version>
+    </dependency>
   </dependencies>
       <repositories>
       <repository>
