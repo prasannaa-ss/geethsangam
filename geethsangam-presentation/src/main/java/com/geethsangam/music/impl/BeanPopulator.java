@@ -5,6 +5,10 @@ import java.util.*;
 import com.geethsangam.music.Album;
 import com.geethsangam.music.Artist;
 import com.geethsangam.music.MM;
+import com.geethsangam.music.MQ;
+import com.geethsangam.music.ReleaseDate;
+import com.geethsangam.music.Track;
+import com.geethsangam.music.TrackSummary;
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.vocabulary.*;
 
@@ -204,10 +208,11 @@ public class BeanPopulator
             }
             album.setCdindexids(cdids);
         }
-        if ( rAlbum.hasProperty(Amazon.Asin) )
-        {
-           album.setAmazonId( rAlbum.getProperty(Amazon.Asin).getString());
-        }
+        //TODO
+//        if ( rAlbum.hasProperty(Amazon.Asin) )
+//        {
+//           album.setAmazonId( rAlbum.getProperty(Amazon.Asin).getString());
+//        }
         if ( rAlbum.hasProperty( MM.releaseDateList ) )
         {
            album.setReleaseDates( getReleaseDates(rAlbum) );

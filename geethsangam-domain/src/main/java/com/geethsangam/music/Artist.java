@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
+
 /**
  * @author prasannaa_ss
  *
@@ -19,6 +20,17 @@ public class Artist {
     
     private static HashMap artists = new HashMap();
 
+    public static Artist getArtist(String id)
+    {
+        Artist artist = (Artist) artists.get(id);
+        if (artist == null)
+        {
+            artist = new Artist();
+            artist.setId(id);
+            artists.put(id, artist);
+        }
+        return artist;
+    }
     /**
      * @return the id
      */
