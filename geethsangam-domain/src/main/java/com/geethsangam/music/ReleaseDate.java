@@ -12,15 +12,17 @@ import java.io.Serializable;
  */
 public class ReleaseDate implements Serializable
 {
+   /**
+     * 
+     */
+   private static final long serialVersionUID = 1L;
    private String _date;
    private String _country;
    
-   public String getCountry()
-   {
+   public String getCountry() {
       return _country;
    }
-   public String getDate()
-   {
+   public String getDate() {
       return _date;
    }
    public void setCountry(String country)

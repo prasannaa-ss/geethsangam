@@ -16,9 +16,9 @@ public class Artist {
     private String id;
     private String name;
     private String sortName;
-    private List albums;    
+    private List<?> albums;    
     
-    private static HashMap artists = new HashMap();
+    private static HashMap<String, Artist> artists = new HashMap<String, Artist>();
 
     public static Artist getArtist(String id)
     {
@@ -76,21 +76,21 @@ public class Artist {
     /**
      * @return the albums
      */
-    public List getAlbums() {
+    public List<?> getAlbums() {
         return albums;
     }
 
     /**
      * @param albums the albums to set
      */
-    public void setAlbums(List albums) {
+    public void setAlbums(List<?> albums) {
         this.albums = albums;
     }
 
     /**
      * @return the artists
      */
-    public static HashMap getArtists(String id) {
+    public static HashMap<String, Artist> getArtists(String id) {
         Artist artist = (Artist) artists.get(id);
         if (artist == null)
         {
@@ -104,7 +104,7 @@ public class Artist {
     /**
      * @param artists the artists to set
      */
-    public static void setArtists(HashMap artists) {
+    public static void setArtists(HashMap<String, Artist> artists) {
         Artist.artists = artists;
     }
 

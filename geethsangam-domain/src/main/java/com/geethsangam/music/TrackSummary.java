@@ -15,6 +15,10 @@ import java.io.Serializable;
  */
 public final class TrackSummary implements Serializable
 {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
     private String _artistName;
     private String _albumName;
     private String _trackName;

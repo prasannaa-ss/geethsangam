@@ -17,18 +17,16 @@ public class Album {
     private String releaseStatus;
     private String releaseType;
     private Artist artist;
-    private List tracks;
-    private List cdindexids;    
+    private List<?> tracks;
+    private List<?> cdindexids;    
     private String asin;
-    private List releaseDates;
+    private List<?> releaseDates;
 
-    private static HashMap _albums = new HashMap();
+    private static HashMap<String, Album> _albums = new HashMap<String, Album>();
     
-    public static Album getAlbum(String id)
-    {
+    public static Album getAlbum(String id) {
         Album album = (Album)_albums.get(id);
-        if (album == null)
-        {
+        if (album == null) {
             album = new Album();
             album.setId(id);
             _albums.put(id, album);
@@ -99,25 +97,25 @@ public class Album {
     /**
      * @return the tracks
      */
-    public List getTracks() {
+    public List<?> getTracks() {
         return tracks;
     }
     /**
      * @param tracks the tracks to set
      */
-    public void setTracks(List tracks) {
+    public void setTracks(List<?> tracks) {
         this.tracks = tracks;
     }
     /**
      * @return the cdindexids
      */
-    public List getCdindexids() {
+    public List<?> getCdindexids() {
         return cdindexids;
     }
     /**
      * @param cdindexids the cdindexids to set
      */
-    public void setCdindexids(List cdindexids) {
+    public void setCdindexids(List<?> cdindexids) {
         this.cdindexids = cdindexids;
     }
     /**
@@ -135,13 +133,13 @@ public class Album {
     /**
      * @return the releaseDates
      */
-    public List getReleaseDates() {
+    public List<?> getReleaseDates() {
         return releaseDates;
     }
     /**
      * @param releaseDates the releaseDates to set
      */
-    public void setReleaseDates(List releaseDates) {
+    public void setReleaseDates(List<?> releaseDates) {
         this.releaseDates = releaseDates;
     }
 

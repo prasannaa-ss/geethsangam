@@ -9,14 +9,18 @@ import java.util.*;
  * 
  * @author prasannaa
  */
-public class Track implements Comparable, Serializable
+public class Track implements Comparable<Object>, Serializable
 {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
     private String _id;
     private String _name;
     private int _number;
     private int _duration; //ms
     private Artist _artist;
-    private List _trmIds;
+    private List<?> _trmIds;
     private Album _album;    
         
 	/**
@@ -62,7 +66,7 @@ public class Track implements Comparable, Serializable
 	/**
 	 * @return
 	 */
-	public List getTrmIds()
+	public List<?> getTrmIds()
 	{
 		return _trmIds;
 	}
@@ -110,7 +114,7 @@ public class Track implements Comparable, Serializable
 	/**
 	 * @param list
 	 */
-	public void setTrmIds(List list)
+	public void setTrmIds(List<?> list)
 	{
 		_trmIds = list;
 	}

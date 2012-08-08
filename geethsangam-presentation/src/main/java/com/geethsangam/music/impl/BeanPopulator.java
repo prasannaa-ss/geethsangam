@@ -34,13 +34,13 @@ public class BeanPopulator
      * @param model
      * @return the list of Artist object, populated from the artistList in the Model 
      */
-    public static List getArtists(Model model)
+    public static List<Artist> getArtists(Model model)
     {
         ResIterator iter = model.listSubjectsWithProperty(MM.artistList);
                                                                                       
         if (!iter.hasNext())
         {
-            return new ArrayList();                                                                                                
+            return new ArrayList<Artist>();                                                                                                
         }        
         Resource result = iter.nextResource();
         Statement statement = result.getProperty(MM.artistList);
@@ -48,10 +48,9 @@ public class BeanPopulator
                                                         
         NodeIterator nIter = bag.iterator();
 
-        List artists = new ArrayList();
+        List<Artist> artists = new ArrayList<Artist>();
                 
-        while (nIter.hasNext())
-        {
+        while (nIter.hasNext()) {
             Resource resource = (Resource)nIter.nextNode();
 
             artists.add( getArtist(resource, false) );               
@@ -79,19 +78,16 @@ public class BeanPopulator
      * @param model
      * @return the List of Album object, may be empty.
      */
-    public static List getAlbums(Model model)
-    {
+    public static List<Album> getAlbums(Model model) {
         ResIterator iter = model.listSubjectsWithProperty(MM.albumList);
                                                                                       
-        if (!iter.hasNext())
-        {
-            return new ArrayList();                                                                                                
+        if (!iter.hasNext()) {
+            return new ArrayList<Album>();                                                                                                
         }        
         
         Resource result = iter.nextResource();
         //make sure we're processing the result, not an mm:Artist for a query with depth > 1
-        while( !result.getProperty(RDF.type).getObject().equals(MQ.Result) )
-        {
+        while( !result.getProperty(RDF.type).getObject().equals(MQ.Result) ) {
             result = iter.nextResource();
         }
         
@@ -100,10 +96,9 @@ public class BeanPopulator
                                                         
         NodeIterator nIter = bag.iterator();
 
-        List albums = new ArrayList();
+        List<Album> albums = new ArrayList<Album>();
 
-        while (nIter.hasNext())
-        {
+        while (nIter.hasNext()) {
             Resource rAlbum = (Resource)nIter.nextNode();            
             albums.add( getAlbum(rAlbum, true) );            
         }
@@ -185,24 +180,20 @@ public class BeanPopulator
         {
             album.setReleaseStatus( rAlbum.getProperty(MM.releaseStatus).getObject().toString() );
         }
-        if (rAlbum.hasProperty(MM.releaseType))
-        {            
+        if (rAlbum.hasProperty(MM.releaseType)) {
             album.setReleaseType( rAlbum.getProperty(MM.releaseType).getObject().toString() );
         }                
-        if ( rAlbum.hasProperty(MM.cdindexid) )
-        {
-            List cdindexids = new ArrayList();
+        if ( rAlbum.hasProperty(MM.cdindexid) ) {
+            List<String> cdindexids = new ArrayList<String>();
             cdindexids.add( rAlbum.getProperty(MM.cdindexid).getString() );
             album.setCdindexids(cdindexids);
         }        
-        if ( rAlbum.hasProperty(MM.cdindexidList) )
-        {
-            List cdids = new ArrayList();
+        if ( rAlbum.hasProperty(MM.cdindexidList) ) {
+            List<String> cdids = new ArrayList<String>();
             Statement cdindexidList = rAlbum.getProperty(MM.cdindexidList);
             Bag cdindexBag = cdindexidList.getBag();
             NodeIterator nIter = cdindexBag.iterator();
-            while (nIter.hasNext())
-            {
+            while (nIter.hasNext()) {
                 Resource cdindexid = (Resource)nIter.nextNode();
                 cdids.add( getId(cdindexid.getURI()) );
             }
@@ -217,24 +208,22 @@ public class BeanPopulator
         {
            album.setReleaseDates( getReleaseDates(rAlbum) );
         }
-        return album;        
+        return album;
     }
     
     /**
      * @param resource an mm:Artist with an mm:albumList property.
      * @return a List of Album objects, may be empty.
      */
-    public static List getAlbums(Resource resource)
-    {
+    public static List<Album> getAlbums(Resource resource) {
        Statement albumList = (Statement)resource.getProperty(MM.albumList);
        Bag albumBag = albumList.getBag();
              
        NodeIterator nIter = albumBag.iterator();
-       List albums = new ArrayList();
-       while (nIter.hasNext())
-       {
-           Resource rAlbum = (Resource)nIter.nextNode();                     
-           albums.add( getAlbum(rAlbum, true) );            
+       List<Album> albums = new ArrayList<Album>();
+       while (nIter.hasNext()) {
+           Resource rAlbum = (Resource)nIter.nextNode();
+           albums.add( getAlbum(rAlbum, true) );
        }   
        return albums;
     }
@@ -243,13 +232,12 @@ public class BeanPopulator
      * @param resource an mm:Album resource containing an mm:trackList
      * @return a List of Tracks, may be empty.
      */
-    public static List getTracks(Resource resource)
-    {
+    public static List<Track> getTracks(Resource resource) {
         Statement trackList = (Statement)resource.getProperty(MM.trackList);
         Seq trackSeq = trackList.getSeq();
         
         NodeIterator nIter = trackSeq.iterator();
-        List tracks = new ArrayList();
+        List<Track> tracks = new ArrayList<Track>();
         
         int count = 1;
         while (nIter.hasNext())
@@ -263,13 +251,13 @@ public class BeanPopulator
         return tracks;
     }
     
-    public static List getReleaseDates(Resource album)
+    public static List<ReleaseDate> getReleaseDates(Resource album)
     {
        Statement dates = (Statement)album.getProperty(MM.releaseDateList);
        Seq dateSeq = dates.getSeq();
        
        NodeIterator nIter = dateSeq.iterator();
-       List releases = new ArrayList();
+       List<ReleaseDate> releases = new ArrayList<ReleaseDate>();
        
        int count = 1;
        while (nIter.hasNext())
@@ -336,13 +324,13 @@ public class BeanPopulator
         }
         if ( rTrack.hasProperty(MM.trmid) )
         {
-            List trmids = new ArrayList();
+            List<String> trmids = new ArrayList<String>();
             trmids.add( rTrack.getProperty(MM.trmid).getString() );
             track.setTrmIds(trmids);
         }       
         if ( rTrack.hasProperty(MM.trmidList) )
         {
-            List trmids = new ArrayList();
+            List<String> trmids = new ArrayList<String>();
             Statement trmidList = rTrack.getProperty(MM.trmidList);
             Bag trmBag = trmidList.getBag();
             NodeIterator nIter = trmBag.iterator();

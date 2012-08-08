@@ -15,7 +15,12 @@ import com.hp.hpl.jena.rdf.model.Model;
  */
 public class MusicBrainzException extends RuntimeException
 {
-	public MusicBrainzException()
+	/**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+
+    public MusicBrainzException()
 	{
 		super();
 	}
