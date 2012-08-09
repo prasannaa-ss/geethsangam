@@ -8,7 +8,9 @@
   <name>Geethsangam</name>
   <url>http://maven.apache.org</url>
   <modules>
+    <module>geethsangam-env</module>
     <module>geethsangam-domain</module>
     <module>geethsangam-presentation</module>
+    <module>geethsangam-web</module>
   </modules>
 </project>

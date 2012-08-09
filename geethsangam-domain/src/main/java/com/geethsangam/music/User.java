@@ -15,7 +15,7 @@ public class User implements Serializable {
      */
     private static final long serialVersionUID = 1L;
     private String name;
-    private Long bbcid = null;
+    private Long geethsangamId = null;
     private String userName;
     private String artistGid = null;
     /**
@@ -31,16 +31,16 @@ public class User implements Serializable {
         this.name = name;
     }
     /**
-     * @return the bbcid
+     * @return the geethsangamId
      */
-    public Long getBbcid() {
-        return bbcid;
+    public Long getGeethsangamId() {
+        return geethsangamId;
     }
     /**
-     * @param bbcid the bbcid to set
+     * @param geethsangamId the geethsangamId to set
      */
-    public void setBbcid(Long bbcid) {
-        this.bbcid = bbcid;
+    public void setGeethsangamId(Long geethsangamId) {
+        this.geethsangamId = geethsangamId;
     }
     /**
      * @return the userName
