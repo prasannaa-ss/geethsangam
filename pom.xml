@@ -12,5 +12,6 @@
     <module>geethsangam-domain</module>
     <module>geethsangam-presentation</module>
     <module>geethsangam-web</module>
+    <module>geethsangam-service</module>
   </modules>
 </project>

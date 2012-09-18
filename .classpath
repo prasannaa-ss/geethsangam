@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="geethsangam-domain/src/main/java"/>
+	<classpathentry kind="src" path="geethsangam-web/src/main/java"/>
+	<classpathentry kind="src" path="geethsangam-presentation/src/main/java"/>
+	<classpathentry excluding="com/geethsangam/music/impl/" kind="src" path="geethsangam-presentation/src/test/java"/>
+	<classpathentry kind="src" path="geethsangam-presentation/src/test/java/com/geethsangam/music/impl"/>
+	<classpathentry kind="lib" path="geethsangam-domain/target/geethsangam-domain-0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/prasannaa_ss/.m2/repository/org/apache/jena/jena-arq/2.9.0-incubating/jena-arq-2.9.0-incubating.jar"/>
+	<classpathentry kind="lib" path="/Users/prasannaa_ss/.m2/repository/org/apache/jena/jena-core/2.7.0-incubating/jena-core-2.7.0-incubating.jar"/>
+	<classpathentry kind="lib" path="/Users/prasannaa_ss/.m2/repository/org/apache/jena/jena-iri/0.9.0-incubating/jena-iri-0.9.0-incubating.jar"/>
+	<classpathentry kind="lib" path="/Users/prasannaa_ss/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/prasannaa_ss/.m2/repository/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="output" path="geethsangam-presentation/target/test-classes"/>
+</classpath>
